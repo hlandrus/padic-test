@@ -1,5 +1,4 @@
-'''Playing around with implementing the p-adic norm in Python. 
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.461.4588&rep=rep1&type=pdf'''
+'''Playing around with implementing the p-adic norm in Python.'''
 from fractions import Fraction
 import primes
 
