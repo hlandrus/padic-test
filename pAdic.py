@@ -5,7 +5,12 @@ import primes
 
 def find_p_ord_int(a,p):
     '''Calculate the ordinal of a, an int, with respect to p a prime.'''
-    assert int(a) 
+    if a == 0:
+        return 0
+    try:
+        a = int(a)
+    except ValueError:
+        raise ValueError
     if not primes.prime_check(p):
         raise 'Error p not prime'
     else:
