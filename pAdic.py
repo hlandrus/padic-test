@@ -6,7 +6,12 @@ import primes
 def find_p_ord_int(a,p):
     '''Calculate the ordinal of a, an int, with respect to p a prime.'''
     if a == 0:
-        return 0
+        if not primes.prime_check(p):
+            raise 'Error p not prime'
+        else:
+            return float("inf")
+    elif isinstance(a,Fraction):
+        raise 'Error a is a fraction must be an int.'
     try:
         a = int(a)
     except ValueError:
@@ -20,6 +25,7 @@ def find_p_ord_int(a,p):
         return c - 1
 
 def find_p_ord(a,p):
+    '''Calculate the ordinal of a rational number a with respect to a prime p.'''
     if a == 0:
         if not primes.prime_check(p):
             raise 'Error p not prime'
@@ -30,7 +36,6 @@ def find_p_ord(a,p):
     else:
         try:
             frac = Fraction(a).limit_denominator()
-        
         except ValueError:
             raise ValueError
             
