@@ -1,5 +1,5 @@
 # The p-Adic Norm and Property Based Testing
-This repo sprung from two motivations. Implimenting the p-Adic norm which has some unusual properties and playing with property based testing. These things fit well together since the p-Adic norm has some proven mathematical properties that can be used to help test an implimentation of it.
+This repo originated from two motivations. Implementing the p-Adic norm which has some unusual properties and playing with property based testing. These things fit well together since the p-Adic norm has some proven mathematical properties that can be used to help test an implementation of it.
 
 # Files
 Using_pAdic_Norm.ipynb is a notebook that explains the p-Adic norm and uses the functions in the remaining files. 
