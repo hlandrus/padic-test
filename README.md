@@ -1,7 +1,7 @@
 # The p-Adic Norm and Property Based Testing
 This repo sprung from two motivations. Implimenting the p-Adic norm which has some unusual properties and playing with property based testing. These things fit well together since the p-Adic norm has some proven mathematical properties that can be used to help test an implimentation of it.
 
-#Files
+# Files
 Using_pAdic_Norm.ipynb is a notebook that explains the p-Adic norm and uses the functions in the remaining files. 
 
 primes.py has functions to help test primes up to 1000, used to validate the prime being considered is valid.
