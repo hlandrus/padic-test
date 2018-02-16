@@ -5,6 +5,7 @@ max_prime = 1000
 list_primes = primes.create_prime_list()
 
 def test_if_divisible_not_prime():
+    '''Test property that if a|b then b cannot be prime.'''
     for i in range(10000):
         a = random.randint(2,10)
         b = random.randint(1,max_prime)
@@ -13,6 +14,7 @@ def test_if_divisible_not_prime():
             assert primes.prime_check(b) == False, error_message
 
 def test_if_prime_then_no_divisors():
+    '''Test that if a is prime then no integers will divide a. Can stop at a/2.'''
     for i in range(10000):
         a = random.randint(1,max_prime)
         if primes.prime_check(a):

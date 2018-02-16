@@ -7,6 +7,8 @@ max_prime = 1000
 list_primes = primes.create_prime_list()
 
 def test_ordab_eq_orda_plus_ordb():
+    '''Test property that ord_p(ab) == ord_p(a) + ord_p(b) 
+        over 10000 random integers for first five primes'''
     for i in range(10000):
         p = get_random_prime(5)
         a = random.randint(-10000,10000)
@@ -15,7 +17,9 @@ def test_ordab_eq_orda_plus_ordb():
         assert padic.find_p_ord(a,p) + padic.find_p_ord(b,p) == padic.find_p_ord(a*b,p), error_message 
 
 def test_positive_unless_zero():
-    for i in range(10):
+    '''Test property that |a|_p = 0 iff a=0 and |a|_p > 0 
+        over 10000 random integers for first five primes'''
+    for i in range(10000):
         p = get_random_prime(5)
         a = random.randint(-10000,10000)
         norm_p_of_a = padic.p_norm(a,p)
@@ -29,6 +33,8 @@ def test_positive_unless_zero():
             assert norm_p_of_a > 0, error_message_non_positive
 
 def test_multiplicative():
+    '''Test property that |ab|_p == |a|_p |b|_p
+        over 10000 random integers for first five primes'''
     for i in range(10000):
         p = get_random_prime(5)
         a = random.randint(-10000,10000)
@@ -42,6 +48,8 @@ def test_multiplicative():
         assert frac_norm_p_of_a_b == frac_norm_p_of_ab, error_message 
 
 def test_triangle_inequality():
+    '''Test property that |a+b|_p <= |a|_p + |b|_p
+        over 10000 random integers for first five primes'''
     for i in range(10000):
         p = get_random_prime(5)
         a = random.randint(-10000,10000)

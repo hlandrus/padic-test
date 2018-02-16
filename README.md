@@ -4,7 +4,7 @@ This repo started from two motivations. Implementing the p-Adic norm which has s
 # Files
 Using_pAdic_Norm.ipynb is a notebook that explains the p-Adic norm and uses the functions in the remaining files to demonstrate the unusual behavior of the p-Adic norm. 
 
-pAdic.py has functions related to calculating the ordinal, norm and metric with respect to a prime p.
+padic.py has functions related to calculating the ordinal, norm and metric with respect to a prime p.
 
 primes.py has functions to help test primes up to 1000, used to validate the prime being considered.
 

@@ -1,7 +1,7 @@
 '''A collection of functions relating to the testing of primes'''
 
 def create_seive(n):
-    '''Creates a list of primes up to n. 
+    '''Creates a list of primality of integers up to n. 
     n Should be an positive and if not integer will round down to closest int '''
     try:
         n = int(n)
@@ -27,6 +27,8 @@ is_prime_list = create_seive(max_prime)
 
 
 def create_prime_list():
+    '''Creates a list of primes up to n. 
+    n Should be an positive and if not integer will round down to closest int '''
 	prime_list = []
 	for i, j in zip(is_prime_list, range(0,max_prime)):
 		if i:
