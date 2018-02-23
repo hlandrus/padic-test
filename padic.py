@@ -3,36 +3,35 @@ from fractions import Fraction
 import primes
 
 
+def validate_prime(p):
+    if not primes.prime_check(p):
+        raise ValueError
+
+
 def find_p_ord_int(a, p):
     '''Calculate the ordinal of a, an int, with respect to p a prime.'''
     if a == 0:
-        if not primes.prime_check(p):
-            raise 'Error p not prime'
-        else:
-            return float("inf")
+        validate_prime(p)
+        return float("inf")
     elif isinstance(a, Fraction):
         raise 'Error a is a fraction must be an int.'
     try:
         a = int(a)
     except ValueError:
         raise ValueError
-    if not primes.prime_check(p):
-        raise 'Error p not prime'
-    else:
-        c = 0
-        while a % (p**c) == 0:
-            c += 1
-        return c - 1
+    validate_prime(p)
+    c = 0
+    while a % (p**c) == 0:
+        c += 1
+    return c - 1
 
 
 def find_p_ord(a, p):
     '''Calculate the ordinal of a rational number a
         with respect to a prime p.'''
     if a == 0:
-        if not primes.prime_check(p):
-            raise 'Error p not prime'
-        else:
-            return float("inf")
+        validate_prime(p)
+        return float("inf")
     elif isinstance(a, int):
         return find_p_ord_int(a, p)
     else:
